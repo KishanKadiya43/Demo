@@ -9,6 +9,7 @@ import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.interview.practicaltatsoft.adapter.ProfileAdapter
+import com.interview.practicaltatsoft.common.PaginationScrollListener
 import com.interview.practicaltatsoft.databinding.ActivityTaskTwoBinding
 import com.interview.practicaltatsoft.model.DataItem
 import com.interview.practicaltatsoft.model.Response
@@ -50,10 +51,27 @@ class Task_Two_Activity : AppCompatActivity() {
                         binding?.recyclerview?.adapter = adapter
                         binding?.recyclerview?.isNestedScrollingEnabled = false;
 
-                    } else {
+                        /* binding?.recyclerview.addOnScrollListener( object  : PaginationScrollListener() {
 
+
+                             override fun isLastPage(): Boolean {
+                                 TODO("Not yet implemented")
+                             }
+
+                             override fun loadMoreItems() {
+                                 TODO("Not yet implemented")
+                             }
+
+                             override fun isLoading(): Boolean {
+                                 TODO("Not yet implemented")
+                             }
+                         });
+
+                         loadFirstPage();
+                     } else {
+
+                     }*/
                     }
-                } else {
                 }
             }
 

@@ -1,6 +1,7 @@
 package com.interview.practicaltatsoft.adapter
 
 import android.content.Context
+import android.graphics.Movie
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -16,6 +17,14 @@ class ProfileAdapter(data: ArrayList<DataItem>, requireContext: Context) :
 
     private lateinit var datas: ArrayList<DataItem>
     private lateinit var context: Context
+    private val LOADING = 0
+    private val ITEM = 1
+    private val isLoadingAdded = false
+
+    fun setProfileList(movieList: ArrayList<DataItem>) {
+        this.datas = movieList
+    }
+
 
     init {
         this.datas = data
