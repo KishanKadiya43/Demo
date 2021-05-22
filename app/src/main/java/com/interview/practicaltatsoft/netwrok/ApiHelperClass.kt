@@ -14,7 +14,6 @@ class ApiHelperClass {
         var Base_Url = "https://reqres.in/"
         private var retrofit: Retrofit? = null
 
-
         fun getRetrofitIns(): Retrofit? {
             var interceptor = HttpLoggingInterceptor();
             interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);

@@ -24,7 +24,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View?) {
         when (v) {
             binding.btnButtonFirst -> {
-                Toast.makeText(this, "Click First btn", Toast.LENGTH_SHORT).show()
+                var intentSecound = Intent(this, Task_Play_Game_Activity::class.java)
+                startActivity(intentSecound)
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out)
             }
             binding.btnButtonTwo -> {
                 var intentSecound = Intent(this, Task_Two_Activity::class.java)
