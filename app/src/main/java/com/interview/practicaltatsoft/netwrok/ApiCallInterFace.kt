@@ -7,7 +7,7 @@ import retrofit2.http.GET
 
 interface ApiCallInterFace {
 
-    //@GET("/api/unknown")
-  //  fun doGetListResources(): Call<ArrayList<> Response>?
+    @GET("api/users?page=1")
+    fun doGetListResources(): retrofit2.Call<Response>
 
 }
